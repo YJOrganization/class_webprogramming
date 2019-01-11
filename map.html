@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<title>오시는 길</title>
+<link type="text/css" rel="stylesheet" href="stylediv.css">
+<!--stylediv.css라는 외부css 파일 링크-->
+<style>
+/*아이디가 div1인 div style 설정*/
+#div1{
+	margin:15px 15px 15px 70px;
+	padding:5px;
+	font-size : 35pt;
+	font-weight :  bold;
+}
+/*아이디가 div2인 div style 설정*/
+#div2{
+	width:930px;
+	height:500px;
+	margin:15px 15px 15px 70px;
+	padding:5px;
+}
+/*아이디가 divAdress인 div style 설정*/
+#divAddress{
+	float:left;
+	margin:10px;
+	padding:5px;
+}
+/*아이디가 table인 무정의 리스트 style 설정*/
+#table{
+	float:right;
+	width:430px;
+	margin:30px;
+	padding:5px;	
+	font-size : 15pt;
+	
+}
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/*전체적인 배경색과 폰트 설정*/
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>
+</head>
+
+<body>
+<div id="div1">
+오시는 길
+</div>
+
+<div id="div2">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- 위의 주소는 Google maps API의 링크로 해당 링크에 있는 API의 모든 정의와 함수들을 불러와 사용할 수 있음. sensor=false를 true로 수정할 경우 현재 사용자의 위치를 불러오는 것임-->
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+var mapLatLng = new google.maps.LatLng(37.549293, 127.075073) /*gogole.maps.LatLng은 좌표 변수 type이고 자신이 원하는 좌표값을 넣음, 이 type으로 mapLatLng이라는 변수를 생성*/
+
+/*mapOptions라는 배열에 지도의 확대 정도(zoom), 지도의 중심 좌표(center), 지도의 형식에 관한 정보(mapTypeid)를 저장하여 맵의 설정 정보로 활용가능하게 함*/
+var mapOptions = { 
+
+zoom: 17, 
+
+center: mapLatLng,
+
+mapTypeId: google.maps.MapTypeId.ROADMAP 
+/*mapTypeIds는 ROADMAP(일반 2D 지도)로 설정함 , */
+
+}
+
+var mapGoogle = new google.maps.Map(document.getElementById('divAddress'), mapOptions);
+/* 설정 정보들을 초기화 한 후 google.maps.Map type의 변수인 map을 위의 divAddress 컨테이너와 위의 설정 배열로 선언함*/
+
+/*위치 표시 함수*/
+var mapMarker = new google.maps.Marker({
+
+map: mapGoogle, /*구글에서 지도를 받음*/
+
+position: mapLatLng, /*마커의 처음위치 지정*/
+
+animation: google.maps.Animation.DROP, /*마커의 애니메이션 속성 사용, DROP은 마커가 지도에 처음 배치될 때 지도 맨 위에서 마지막 위초로 떨어져야 함을 나타냄 */
+
+title: "세종대학교"
+
+});
+
+/*이벤트 알림 함수 mapMarker함수를 click이벤트로 실행*/
+google.maps.event.addListener(mapMarker, 'click', function () {
+
+mapGoogle.setCenter(mapMarker.getPosition()); /*마커의 위치를 지도에 설정*/
+
+});
+
+}); 
+
+</script>
+
+<div id="divAddress" style="width:400px; height:400px;"></div>
+
+
+
+<dl id="table">
+<dt>주소</dt>
+<dd><p>서울특별시 광진구 능동로 209</p>
+</dd>
+
+<dt>FAX</dt>
+<dd><p>143-747(05006)</p>
+</dd>
+
+<dt>교통편</dt>
+<dd><p>어린이 대공원역 6번 출구</p>
+</dd>
+
+<dt>셔틀버스</dt>
+<dd><p>첫 차: 오전 10시</p><p>마지막 차: 오후 6시</p><p>운행 간격:2시간</p></dd>
+
+</dl>
+</div>
+</body>
+</html>

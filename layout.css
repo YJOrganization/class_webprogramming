@@ -1,0 +1,56 @@
+<style>
+/*전체 레이아웃 설정 : 상대적 크기로 설정*/
+
+/*header : 보담 글씨 사진이 있는 부분*/
+#header
+{
+   width :100%; height: 30%;
+	padding : 20px 0px;
+	margin : 20px 0px;
+}
+/*nav : 메뉴바가 있는 부분*/
+#nav
+{
+  	 width :100%; height: 15%;
+}
+
+/*content : iframe이 설정된 부분*/
+#content
+{
+   width :95%; height: 30%;
+   padding : 10px 0px 0px 50px;
+   float: left;
+	
+}
+
+/*fixed : top버튼이 있는 부분*/
+#fixed
+{
+	width :5%;height: 30%;
+	padding : 2px 0px 0px 0px;
+	margin : 0px 0px 200px 100px;
+   	float: right;
+}
+
+
+/*footer : 주소가 적힌 부분*/
+#footer
+{
+	width : 100%;
+	height : 30%;
+	clear : both;
+}
+
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>

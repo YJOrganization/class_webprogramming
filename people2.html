@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head><title>1인실</title>
+<style>
+/*박스 설정*/
+ .cycle-slideshow, .cycle-slideshow * { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+	}
+	
+/*슬라이드쇼 박스 레이아웃*/	
+.cycle-slideshow { 
+	width: 900px; 
+	min-width: 10px; 
+	max-width: 500px; 
+	margin: 10px auto; 
+	padding: 0; 
+	position: relative;
+	}
+
+	
+/*div 사이즈에 상대적으로 크기 조정*/	
+.cycle-slideshow div.slide { 
+	width: 100%; 
+	height: 100%;
+	}
+	
+/*박스 안 이미지 위치*/
+.cycle-slideshow img { 
+    
+    position: absolute; 
+	top: 0; 
+	left: 0;
+    width: 100%;
+	padding: 0; 
+	display: block;
+}
+
+/*슬라이드 첫번째 이미지*/
+.cycle-slideshow img:first-child {
+    position: static; 
+	z-index: 100;
+}
+
+/*동그라미 위치 설정*/
+.cycle-pager { 
+    text-align: center; 
+	width: 100%; 
+	z-index: 500;
+	position: absolute; 
+	top: 2px; 
+	overflow: hidden;
+}
+
+/*동그라미 스타일*/
+.cycle-pager span { 
+    font-family: arial; 
+	font-size: 50px; 
+	width: 16px; 
+	height: 16px; 
+    display: inline-block; 
+	color: #ddd; 
+	cursor: pointer; 
+}
+
+/*이미지 슬라이드 작동 시 해당 슬라이드 동그라미 색 변경*/
+.cycle-pager span.cycle-pager-active { 
+	color: #D69746;
+	}
+	
+/*동그라미 클릭 시 슬라이드 위치 이동*/
+.cycle-pager > * { 
+	cursor: pointer;
+	}
+	
+/*아이디가 diva인 div style 설정*/
+#diva{
+	float:left;
+	border-style :solid;
+	border-width : 1px;
+	border-radius : 6px;
+	border-color : #bebebe;
+	margin:10px;
+	padding:10px;
+	width:300px;
+	}
+	
+/*아이디가 div2인 div style 설정*/	
+#div2{
+	float:left;
+	margin:10px;
+	border-style :solid;
+	border-width : 1px;
+	border-radius : 6px;
+	border-color : #bebebe;
+}
+
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+
+/* 전체적인 배경색과 폰트 설정*/ 
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="div2">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<div class="cycle-slideshow"
+
+     data-cycle-fx=scrollHorz
+    data-cycle-timeout=2000
+	>
+<!--cycle 속성 fx 값으로 scrollHorz사용-->
+<!--2초 후 페이지 슬라이드-->
+
+
+<div class="cycle-pager"></div> 
+<!--추가함으로써 라이브러리 이용 가능, CSS이용 가능--> 
+
+    <img src="people2img.png">
+    <img src="place2.png">
+   
+</div>
+</div> 
+<div id="diva">
+<h1>2인실</h1>
+<h3>부부 동반 입주자를 위한 공간으로 여느 가정집과 다르지 않은 인테리어를 지향합니다.</h3>
+<dl>
+<dt>가구 배치</dt>
+<dd>-인테리어 결정 시에 신청 하실 경우 입주자 소유의 개인 가구를 배치하실 수 있습니다.</dd>
+<dd>-배치 가능 가구의 개수는 5개 이하입니다.</dd>
+
+<dt>복층</dt>
+<dd>-화장실 2, 주방 1, 거실 1, 방 2, 2층 테라스</dd>
+
+
+<dt>단층</dt>
+<dd>-화장실 1, 주방 1,거실 1, 방 1</dd>
+</dl>
+</div>
+</body>
+
+</html>

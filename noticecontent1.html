@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*아이디가 table인 div style 설정*/
+#table{
+	margin : 0px 0px 0px 80px;
+}
+/*table 전체 style 설정*/
+table, th, td{
+	border-collapse:collapse;
+	border-style : solid none solid none; 
+	border-color : #bebebe;
+	color:  #a0a0a0;
+}
+/*테이블에서 th style 설정*/
+th{
+	background-color : #b4b4b4; 
+}
+/*table style 설정*/
+table{
+	margin :100px 0px 0px 120px;
+	padding :30px 0px 0px 30px;
+	text-align : center;
+}
+p{
+	float : right;
+	margin :10px 30px 0px 0px;
+}
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/*전체적인 폰트 설정 설정*/
+body{
+	font-family : SDMiSaeng;
+	font-size : 20pt;
+}
+/*아이디가 td1인 td border style 설정*/
+#td1{
+	border-style : solid solid solid none;
+}
+/*아이디가 td2인 td border style 설정*/
+#td2{
+	border-style : solid solid solid solid;
+}
+/*아이디가 td3인 td border style 설정*/
+#td3{
+	border-style : solid solid solid solid;
+}
+/*아이디가 td4인 td border style 설정*/
+#td4{
+	border-style : solid none solid solid;
+}
+
+</style>
+
+</head>
+<body>
+<div id="table">
+<table border="1" width="700" height="460">
+<tr>
+	<td width="100" height="30">제목</td>
+	<td colspan="3" width="600" height="30">레스토랑 공사</td>
+</tr>
+<tr >
+	<td id="td1" width="130" height="30">글쓴이</td>
+	<td id="td2" width="255" height="30">세종 실버</td>
+	<td id="td3" width="130" height="30">날짜</td>
+	<td id="td4">2016.5.6</td>
+</tr>
+<tr>
+	<td colspan="4" width="700" height="400">
+		5월 1일부터 5월 15일까지 레스토랑 공사로 15일 동안 레스토랑 운영이 중단됩니다. 
+	</td>
+</tr>
+</table>
+</div>
+<p>
+<a href="notice.html" target="iframe"><img src="목록.jpg" width="100" height="50"></a>
+</p>
+</body>
+</html>

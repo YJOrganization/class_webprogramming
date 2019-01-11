@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<title>특징과 서비스</title>
+<link type="text/css" rel="stylesheet" href="stylediv.css">
+<style>
+/*아이디가 div1인 div style 설정*/
+#div1{
+	margin:15px 15px 15px 70px;
+	padding : 5px;
+	font-size :35pt;
+	font-weight : bold;
+}
+
+/*아이디가 div2인 div style 설정*/
+#div2{
+	width:930px;
+	height:500px;
+	margin:15px 15px 15px 70px;
+	padding:5px;
+}
+
+
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+
+/* 전체적인 배경색과 폰트 설정*/ 
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+
+/*아이디가 slide인 div의 style 설정*/
+#slide{
+	width: 900px;
+	height: 600px;
+	animation:15s imgslide;
+	animation-iteration-count:100;
+	background-repeat:no-repeat;
+	margin : 50px 0px 0px 100px;
+}
+
+	/* 키프레임 설정 : 주요 이미지 사이에 흰색 배경의 이미지를 넣어 자연스러운 슬라이드를 만듬*/
+	@keyframes imgslide
+	{
+	0% {background-image:url('in1.png');}
+	10%{background-image:url('fkffkf.jpg');}
+	25% {background-image:url('in2.png');}
+	30%{background-image:url('fkffkf.jpg');}
+	50% {background-image:url('in3.png');}
+	60% {background-image:url('fkffkf.jpg');}
+	75% {background-image:url('in4.png');}
+	100% {background-image:url('fkffkf.jpg');}
+	
+	
+	}
+</style>
+</head>
+
+<body>
+<h1></h1>
+<div id="div1">
+특징과 서비스
+</div>
+
+<div id="div2">
+
+<div id="slide">
+
+</div>
+</div>
+</body>
+</html>

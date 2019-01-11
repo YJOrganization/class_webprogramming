@@ -1,0 +1,89 @@
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- utf-8코드 사용-->
+
+<link type="text/css" rel="stylesheet" href="stylediv2.css">
+<!-- stylediv2라는 외부 css 링크-->
+
+<style>
+/*리스트 ul style 설정*/
+ul{
+	list-style:none;
+	text-aline:center;
+	margin:10px 30px 10px 30px;
+	padding:10px;
+	font-size : 25pt;
+	font-weight : bold;
+}
+
+/*리스트 ul의 li style 설정*/
+ul li{
+	display:inline;
+	padding:10px;
+	letter-spacing:20px;
+}
+
+/*리스트 ul의 li의 a style 설정*/
+ul li a{
+	text-decoration:none; color: white;
+	padding : 0px 0px 0px 50px;
+}
+
+/*리스트 ul의 li hover일 경우 style 설정*/
+ul li a:hover{
+	text-decoration:underline; color: blue;
+}
+
+/*아이디가 div1인 div style 설정*/
+#div1{
+	width:1000px; 
+	height:100px; 
+	margin:20px 10px 10px 40px; 
+	padding:1px 5px 35px 5px;
+}
+
+/*아이디가 div2인 div style 설정*/
+#div2{
+	width:1000px;
+	height:560px;
+	margin:20px 10px 10px 40px; 
+	padding:5px;
+
+}
+
+/*내부 iframe style 설정*/
+iframe{ border:none;
+	margin:10px;
+	padding:5px;
+}
+
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/* 전체적인 배경색과 폰트 설정*/ 
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>
+</head>	
+<body>
+
+<div id="div1">
+<table>
+<ul><tr>
+<td><ul><li><a href="chair.html" target="frame">동행서비스</li></ul></td>
+<td><ul><li><a href="security2.html" target="frame">예방활동</li></ul></td>
+<td><ul><li><a href="securitycamera.html" target="frame">방문보안</li></ul></td>
+</table>
+</div>
+<div id="div2">
+<iframe src="chair.html" name="frame" width="950" height="550" scrolling = "no" ></iframe>
+</div>
+</body>
+</html>

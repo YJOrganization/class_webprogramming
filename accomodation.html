@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--utf-8코드 사용-->
+		
+<!--stylediv2.css라는 외부 css 링크-->
+<link type="text/css" rel="stylesheet" href="stylediv2.css">
+<style>
+/*ul style 설정*/
+ul{
+	list-style:none;
+	text-aline:center;
+	margin:10px 30px 10px 30px;
+	padding:10px;
+	font-size : 20pt;
+	font-weight : bold;
+}
+/*ul안의 li의 style 설정*/
+ul li{
+	display:inline;
+	padding:10px;
+	letter-spacing:20px;
+}
+/*ul안의 li의 a의 style 설정*/
+ul li a{
+	text-decoration:none; color: white;
+}
+/*ul안의 li가 hover될 시 style 설정*/
+ul li a:hover{
+	text-decoration:underline; color: blue;
+}
+/*아이디가 div1인 div style 설정*/
+#div1{
+	width:1000px; 
+	height:100px; 
+	margin:20px 10px 10px 40px; 
+	padding:1px 5px 35px 5px;
+}
+/*아이디가 div2인 div style 설정*/
+#div2{
+	width:1000px;
+	height:910px;
+	margin:20px 10px 10px 40px; 
+	padding:5px;
+
+}
+/*iframe 설정*/
+iframe{ border:none;
+	margin:10px;
+	padding:5px;
+}
+
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/* 전체적인 배경색과 폰트 설정*/ 
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>
+
+
+
+</head>	
+<body>
+<!--테이블 리스트를 이용하여 내부 카데고리 설정, frame이라는 이름을 가진 iframe에 내용 전달-->
+<div id="div1">
+<table>
+<ul><tr>
+<td><ul><li><a href="food.html" target="frame">레스토랑</li></ul></td>
+<td><ul><li><a href="room.html" target="frame">다목적실</li></ul></td>
+
+<td><ul><li><a href="cafefront.html" target="frame">카페라운지</li></ul></td>
+<td><ul><li><a href="sauna.html" target="frame">사우나</li></ul></td>
+</table>
+</div>
+<!--내부 iframe설정-->
+<div id="div2">
+<iframe src="food.html" name="frame" width="950" height="900" scrolling = "no" ></iframe>
+</div>
+</body>
+</html>

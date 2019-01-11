@@ -1,0 +1,219 @@
+﻿<!doctype html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- utf-8코드 사용-->
+<style>
+/*전체적 div style 설정*/
+div{
+	position: relative;
+	left: 5px;
+	right:20px;
+	width : 880px;
+}
+/*클래스가 citybox인 div style 설정*/
+div.citybox{
+color: gray;
+border : 2px solid #bebebe;
+padding : 40px 20px 50px 23px;
+border-radius : 25px;
+margin :60px 0px 0px 0px;
+}
+
+/*h1 style 설정*/
+h1{
+	margin : 0px 0px 10px 80px
+}
+/*아이디가 citybox인 div style 설정*/
+#citybox{
+		padding: 15px 0px 15px 0px;
+	}
+	
+/*table style 설정*/	
+	table {
+		color:#666;
+		font-size:12px;
+		background:#eaebec;
+		margin:20px 20px 20px 80px;
+		border:#ccc 1px solid;
+		font-size : 20pt;
+
+	}
+	
+/*table의 th style 설정*/
+	table th {
+		padding:21px 25px 22px 25px;
+		border-top:1px solid #fafafa;
+		border-bottom:1px solid #e0e0e0;
+		background: rgb(220,245,255);
+	}
+/*table의 th의 첫번째 style 설정*/
+	table th:first-child{
+		text-align: left;
+		padding-left:20px;
+	}
+	/*table의 tr style 설정*/
+	table tr{
+		text-align: center;
+		padding-left:20px;
+	}
+	/*table tr의 td의 첫번째 style 설정*/
+	table tr td:first-child{
+		text-align: left;
+		padding-left:20px;
+		border-left: 0;
+	}
+		/*table의 tr의 td style 설정*/
+	table tr td {
+		padding:18px;
+		border-top: 1px solid #ffffff;
+		border-bottom:1px solid #e0e0e0;
+		border-left: 1px solid #e0e0e0;
+		background: rgb(240,250,255);
+	}
+	/*table의 tr의 짝수번째 style 설정*/
+	table tr.even td{
+		background: rgb(230,245,255);
+	}
+	/*table의 tr의 마지막부분 style 설정*/
+	table tr:last-child td{
+		border-bottom:0;
+	}
+	/*table 한 행에 hover할 경우 그 행의 색이 변경됨*/
+	table tr:hover td{
+		background: rgb(170,240,255);
+	}
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/* 전체적인 배경색과 폰트 설정*/ 
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>
+</head>
+<body>
+<div id="citybox">
+<h1 style="color: gray; font-size : 30pt;">도심형 입주 보증금 및 월 생활비</h1>
+
+<table cellspacing='0'>
+<tr>
+	<th>타입</th>
+	<th>임대면적(평)</th>
+	<th>세대수</th>
+	<th>보증금</th>
+	<th>일반관리비</th>
+	<th>식비</th>
+	<th>월 생활비</th>
+
+</tr>
+<tr>
+	<td>F-B1</td>
+	<td>15</td>
+	<td>1</td>
+	<td>285,000</td>
+	<td>1,020</td>
+	<td>462</td>
+	<td>1,482</td>
+	<td>2039</td>
+	<td>안녕하세요</td>
+</tr>
+<tr class='even'>
+	<td>F-B2</td>
+	<td>23</td>
+	<td>1</td>
+	<td>309,000</td>
+	<td>1,252</td>
+	<td>462</td>
+	<td>1,714</td>
+</tr>
+<tr class='even-2'>
+	<td>1층</td>
+	<td>23</td>
+	<td>1</td>
+	<td>309,000</td>
+	<td>1,252</td>
+	<td>462</td>
+	<td>1,714</td>
+</tr>
+<tr>
+	<td>F-F2</td>
+	<td>23</td>
+	<td>1</td>
+	<td>309,000</td>
+	<td>1,252</td>
+	<td>462</td>
+	<td>1,714</td>
+</tr>
+<tr class='even'>
+	<td>S-F1</td>
+	<td>17</td>
+	<td>1</td>
+	<td>292,000</td>
+	<td>1,340</td>
+	<td>462</td>
+	<td>1,802</td>
+</tr>
+<tr>
+	<td>S-B2</td>
+	<td>25</td>
+	<td>2</td>
+	<td>376,000</td>
+	<td>1,540</td>
+	<td>462</td>
+	<td>2,464</td>
+</tr>
+<tr class='even'>
+	<td>S-F2</td>
+	<td>25</td>
+	<td>2</td>
+	<td>376,000</td>
+	<td>1,540</td>
+	<td>462</td>
+	<td>2,464</td>
+</tr>
+<tr>
+	<td>T-B1</td>
+	<td>22</td>
+	<td>1</td>
+	<td>362,000</td>
+	<td>1,414</td>
+	<td>462</td>
+	<td>1,876</td>
+</tr>
+<tr class='even'>
+	<td>T-F1</td>
+	<td>22</td>
+	<td>1</td>
+	<td>362,000</td>
+	<td>1,414</td>
+	<td>462</td>
+	<td>1,876</td>
+</tr>
+<tr>
+	<td>T-B2</td>
+	<td>32</td>
+	<td>2</td>
+	<td>433,000</td>
+	<td>1,614</td>
+	<td>462</td>
+	<td>2,538</td>
+</tr>
+<tr class='even'>
+	<td>T-F2</td>
+	<td>32</td>
+	<td>1</td>
+	<td>433,000</td>
+	<td>1,614</td>
+	<td>462</td>
+	<td>2,538</td>
+
+</table>
+</div>
+</body>
+</html>

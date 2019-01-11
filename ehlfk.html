@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+#img{
+	width:910px;
+	height:720px;
+	float:left;
+}
+img{
+	float:left;
+}
+
+li{
+	display:inline;
+	margin:15px;
+	padding:30px;
+	font-size:30px;
+	
+}
+#backdround{
+	width:910px;
+	height:720px;
+	float:left;
+}
+
+</style>
+<script>
+function change1	(){
+document.getElementById("img").src="ondol_1.jpg";
+}
+
+function change2	(){
+document.getElementById("img").src="ondol_2.jpg";
+}
+</script>
+</head>
+<body>
+<ul>
+<li><input type="button" onclick="change1()" value="1인실"></li>
+<li><input type="button" onclick="change2()" value="2인실"></li>
+</ul>
+
+<div id="background">
+<img id="img" src="testimg.jpg">
+</div>
+
+
+
+
+
+<div id="fur">
+<table>
+<form name="myForm">
+<tr>
+    <!--<td align="right">name = </td>-->
+    <!--<td><input name="NAME" type="text" size="3"></td>-->
+
+    <!--<td align="right">x = </td>-->
+    <!--<td><input name="X" type="text" size="3"></td>-->
+
+    <!--<td align="right">y = </td>-->
+    <!--<td><input name="Y" type="text" size="3"></td>-->
+</tr>
+</form>
+</table>
+
+<script type="text/javascript" src="http://www.blueb.co.kr/SRC/javascript/js/dragdrop.js"></script>
+<img src="bath.jpg" name="img1" >
+<img src="bookshelves.jpg" name="img2">
+<img src="chair1.jpg" name="img3">
+<img src="chandelier.jpg" name="img6">
+<img src="doublebed1.jpg" name="img7">
+<img src="lamp.jpg" name="img11">
+<img src="laundry.jpg" name="img12">
+<img src="singlebed.jpg" name="img13">
+<img src="sink.jpg" name="img14">
+<img src="sofa.jpg" name="img15">
+<img src="table1.jpg" name="img16">
+<img src="table3.jpg" name="img18">
+<img src="table4.jpg" name="img19">
+<img src="toilet.jpg" name="img20">
+<img src="tv.jpg" name="img21">
+<img src="wardrobe.jpg" name="img22">
+
+<script type="text/javascript">
+
+SET_DHTML(CURSOR_MOVE, TRANSPARENT, "img1", "img2","img3","img6","img7","img11","img12","img13","img14","img15","img16","img18","img19","img20","img21","img22");
+
+for (var i = 0; i < 2; i++)
+{
+    dd.elements[i].copy();
+    dd.elements[i].copies[0].hide();
+}
+
+function my_PickFunc()
+{
+    dd.obj.copies[0].moveTo(dd.obj.x, dd.obj.y);
+    dd.obj.copies[0].show();
+}
+
+function my_DropFunc()
+{
+    dd.obj.copies[0].hide();
+
+    document.myForm.NAME.value = dd.obj.name;
+    document.myForm.X.value = dd.obj.x;
+    document.myForm.Y.value = dd.obj.y;
+}
+
+</script>
+</div>
+
+
+</body>
+</html>
+
+
+
+

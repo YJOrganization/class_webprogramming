@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>보담</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--utf-8 코드 사용-->
+		<meta http-equiv="Content-Style-Type" content="text/css" /><!--스타일 시트 형식지정-->
+		<meta http-equiv="Content-Script-Type" content="text/javascript" /><!--자바스크립트 사용-->
+		
+<!--메뉴바 : jquery 라이브러리 사용 -->
+<script type='text/javascript'>
+$(function(){
+	$("ul.sub").hide(); /*클래스 이름이 sub인 ul의 내용이 보이지 않도록 설정*/
+	$("ul.menu li").hover(function(){
+		$("ul:not(:animated)",this).slideDown("fast");
+	},/*class이름이 menu인 ul의 li이 hover가 되는 경우 this가 가리키는 것을 제외하고 빠르게 slideDown을 시키는 함수 */
+	function(){
+		$("ul",this).slideUp("fast"); /* hover을 하지 않는 경우 빠르게 slideUp을 시키는 함수 */
+	});
+});
+</script> 
+
+<!--외부 레이아웃 링크 -->
+<link type="text/css" rel="stylesheet" href="layout.css"/>
+<style type="text/css">
+
+
+*{
+	list-style-type:none;
+}
+/* class이름이 menu인 ul의 li style*/
+ul.menu li{
+	float:left;
+	width:200px;
+	height:40px;
+	font-size : 20pt;
+	position:relative;
+	text-align : center;
+	background : #14D3FF;
+	border-style :none dotted none none;
+	border-width : 1px;
+	border-color : #CDECFA
+}
+
+/* class이름이 menu인 ul의 li의 a style*/
+ul.menu li a{
+	display:block;
+	width:100%;
+	height:100%;
+	line-height:40px;
+	text-indent:0px;
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+}
+/* class이름이 menu인 ul의 li의 a가 hover되는 경우 style*/
+ul.menu li a:hover{
+	background: white;
+	color : #14D3FF;
+}
+/* class이름이 sub인 li의 style*/
+ul.menu li ul.sub{
+	position:relative;
+	background: #14D3FF;
+	color : white;
+	list-style :none;
+	padding-left:0px;
+}
+ul.menu{
+	zoom:1;
+}
+
+/* class이름으 menu인 ul의 다음에 실행할 style*/
+ul.menu:after {
+	height:0;
+	visibility:hidden;
+	content:".";
+	display:block;
+	clear:both;
+}
+h1{
+	text-align : center;
+}
+/* 아이디가 main인 div 위치 설정*/
+#main{
+	position: relative;
+	left :550px;
+}
+/* iframe 마진 설정*/
+iframe{
+	margin : 10px 0px 0px 20px;
+}
+
+/*top 버튼 스타일 */
+      a.jcm-top {
+         position: fixed; /*위치 고정*/
+         right: 15px;
+         bottom: 15px;
+         border-radius: 5px;
+         text-align: center;
+         width: 45px;
+         height: 45px;
+         font-size: 40px;
+         background-color :  #14D3FF;
+         z-index: 999;
+         display: none;
+      }
+/* top버튼 hover시 색 변경*/
+      a.jcm-top:hover{
+         background-color:#000
+         }
+</style>
+</head>
+<body>
+<!--header 부분 : 이미지에 하이퍼링크 설정하여 누를시 메인화면으로 되돌아옴-->
+<div id="header">
+	<div id= "main">
+	<a href="main slide.html" target="iframe"><img src="화면제목.jpg" height="120" width="120"></a>
+	</div>
+</div>
+<!--nav 부분 : 리스트를 통한 메뉴바 설정-->
+<div id="nav">
+<h2>
+<ul class="menu">
+	<li><a href="#">소개</a>
+		<ul class="sub">
+			<li><a href="introduce.html" target="iframe">인사말</a></li>
+			<li><a href="purpose.html" target="iframe">설립 목적</a></li>
+			<li><a href="service.html" target="iframe">특징 및 서비스</a></li>
+			<li><a href="map.html" target="iframe">오시는 길</a></li>
+		</ul>
+	</li>
+	<li><a href="#">입주자서비스</a>
+		<ul class="sub">
+			<li><a href="health_care.html" target="iframe">건강·의료</a></li>
+			<li><a href="culture_program.html" target="iframe">문화 생활</a></li>
+			<li><a href="accomodation.html" target="iframe">편의 시설</a></li>
+			<li><a href="security.html" target="iframe">안전·관리 </a></li>
+		</ul>
+	</li>
+		
+	<li><a href="#" >주거공간</a>
+		<ul class="sub">
+			<li><a href="living.html" target="iframe" >주거 공간</a></li>
+			<li><a href="placement.html" target="iframe" >가구 배치</a></li>
+		</ul>
+	</li>
+	<li><a href="#">안내</a>
+		<ul class="sub">
+			<li><a href="전체안내.html" target="iframe">건물 안내</a></li>
+			<li><a href="층별안내.html" target="iframe">층별 안내</a></li>
+
+		</ul>
+	</li>
+	<li><a href="#">입주안내</a>
+		<ul class="sub">
+			<li><a href="계약방법.html" target="iframe" >계약 방법</a></li>
+			<li><a href="서비스별 입주 안내.html" target="iframe">계약별 서비스 안내</a></li>
+		</ul>
+	</li>
+	<li><a href="#">소식</a>
+		<ul class="sub">
+			<li><a href="notice.html" target="iframe">공지사항</a></li>
+			<li><a href="news.html" target="iframe">뉴스</a></li>
+			<li><a href="웹편지.html" target="iframe" >웹편지</a></li>
+		</ul>
+	</li>
+
+</ul>
+</h2>
+</div>
+<!--content부분 : iframe 설정-->
+<div id= "content">
+	<iframe width="1100" src="main slide.html" name="iframe"   frameborder="0" scrolling="no" height="1200"  ></iframe>
+</div>
+<!--fixed 부분  :  top버튼-->
+<div id="fixed">
+
+	<!--top 버튼-->
+<a href="#" class="jcm-top hidden-xs hidden-sm"><img src = "arrow-up.png" style = " width: 25px;  padding : 8px; border-radius : 6px; "></a>
+
+<!--top 버튼 jquery-->
+<script>
+
+$( document ).ready( function() {/* 문서가 준비되면 실행*/
+
+$( window ).scroll( function() { /*<window>라는 요소를 찾아 <window>요소가 scoll되면 if, else 구문으로 들어감*/
+
+/* scoll의 맨 윗부분의 위치값이 200보다 커지면 클래스가 jcm-top인 요소를 찾아 화면에 나타나게 하고, 200보다 작아지면 화면에 사라지게 함 */
+if ( $( this ).scrollTop() > 200 ) {
+
+
+$( '.jcm-top' ).fadeIn();
+
+} else {
+
+$( '.jcm-top' ).fadeOut();
+
+}
+
+} );
+/* class가 jcm-top인 요소를 찾아 클릭 했을때, html과 body요소를 찾아서 animate를 시킴. animate는 이동속도는 0.8초 이동방향은 스크롤의 윗쪽으로 하고 0인 값으로 함. */
+$( '.jcm-top' ).click( function() {
+
+$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
+
+return false;/*return false : 클릭했을 때의 제일 상단으로 가는 기능을 없애버리는 것으로 자연스러운 jquery 애니메이션 효과를 볼수 있음 */
+
+} );
+
+} );
+/* scollTop()은 선택한 요소의 상하 스크롤 위치를 얻거나 설정하는 메소드임 */
+</script>
+
+</div>
+
+<!--footer 부분 : 주소 출력-->
+<div id="footer" style="text-align : center; font-size: 15pt;">
+<p>서울특별시 광진구 능동로 209<p>
+</div>
+</body>
+</html>

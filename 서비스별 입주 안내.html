@@ -1,0 +1,87 @@
+<!doctype html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- utf-8코드 사용-->
+
+<link type="text/css" rel="stylesheet" href="stylediv2.css">
+<!-- stylediv2라는 외부 css 링크-->
+<style>
+/*리스트 ul style 설정*/
+ul{
+	list-style:none;
+	text-aline:center;
+	margin:-10px 30px 30px 90px;
+	padding:10px;
+	font-size : 20pt;
+	font-weight : bold;
+}
+/*리스트 ul의 li style 설정*/
+ul li{
+	display:inline;
+	padding:10px;
+	letter-spacing:20px;
+}
+/*리스트 ul의 li의 a style 설정*/
+ul li a{
+	text-decoration:none; color: white;
+}
+/*리스트 ul의 li hover일 경우 style 설정*/
+ul li a:hover{
+	text-decoration:underline; color: blue;
+}
+/*아이디가 div1인 div style 설정*/
+#div1{
+	width:1000px; 
+	height:100px; 
+	margin:20px 10px 10px 40px; 
+	padding:1px 5px 35px 5px;
+}
+/*아이디가 div2인 div style 설정*/
+#div2{
+	width:1000px;
+	height:910px;
+	margin:20px 10px 10px 40px; 
+	padding:5px;
+
+}
+/*내부 iframe style 설정*/
+iframe{ border:none;
+	margin:10px;
+	padding:5px;
+}
+
+/*웹폰트 설정*/
+@font-face{
+	font-family:"SDMiSaeng";
+	src:local("SDMiSaeng"),url("SDMiSaeng.woff")format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/* 전체적인 배경색과 폰트 설정*/ 
+body
+{
+	background-color : white;
+	font-family: "SDMiSaeng" ;
+	
+}
+</style>
+
+
+
+</head>	
+<body>
+
+<div id="div1">
+<table>
+<ul><tr>
+<td><ul><li><a href="자격·방법·보증금.html" target="frame">자격·방법<br>·보증금</li></ul></td>
+<td><ul><li><a href="도심형 입주 안내.html" target="frame">도심형 <br>입주 안내</li></ul></td>
+
+<td><ul><li><a href="전원형 입주 안내.html" target="frame">전원형<br> 입주 안내</li></ul></td>
+
+</table>
+</div>
+<div id="div2">
+<iframe src="자격·방법·보증금.html" name="frame" width="950" height="900" scrolling = "no" ></iframe>
+</div>
+</body>
+</html>
